@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font_heading: "Sen", sans-serif;
+    --primary_color: #FFB900;
+}
+
 html {
     /* Quy đổi 1rem = 10px */
     font-size: 62.5%;
@@ -33,17 +38,26 @@ a {
     text-align: center;
     display: inline-block;
     padding: 0px 16px;
-    border-radius: 24.5px;
+    border-radius: 999px;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 50px;
 }
 
+.btn:hover {
+    opacity: 0.9;
+}
+
+.watchVideo {
+    display: flex;
+}
+
 /* =======================Header======================= */
 
 .header {
-    background: rgb(0, 255, 255);
-    background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgba(9, 35, 121, 1) 80%, rgba(62, 62, 62, 1) 100%);
+    /* background: rgb(0, 255, 255);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgba(9, 35, 121, 1) 80%, rgba(62, 62, 62, 1) 100%); */
+    background: #fffcf4;
 }
 
 .logoweb {
@@ -55,6 +69,7 @@ a {
 .header.fixed {
     position: sticky;
     top: -28px;
+    z-index: 1000;
 }
 
 .bodyHeader {
@@ -102,4 +117,158 @@ a {
 
 .header.action {
     margin-left: 49px;
+}
+
+/* =======================Hero======================= */
+
+.hero {
+    padding-top: 56px 0 65px;
+    background: #fffcf4;
+}
+
+.hero .bodyHero {
+    display: flex;
+}
+
+/* =======================Hero Left======================= */
+
+
+.hero .mediaBlock {
+    width: 48%;
+    position: relative;
+}
+
+.hero .contentBlock {
+    width: 52%;
+}
+
+.hero .mediaBlock .img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero .heroSumary {
+    padding: 24px;
+    width: 270px;
+    position: absolute;
+    bottom: 48px;
+    right: 0px;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.heroSumary .item {
+    display: flex;
+}
+
+/* Viết như này có thể hiểu là sẽ tác động vào class item đứng sau 1 class item  */
+.heroSumary .item+.item {
+    margin-top: 22px;
+}
+
+.heroSumary .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroSumary .info {
+    margin-left: 16px;
+}
+
+.heroSumary .label {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 186%;
+}
+
+.heroSumary .tittle {
+    color: #171717;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+/* =======================Hero Right======================= */
+
+.hero .contentBlock {
+    width: 52%;
+    padding-left: 130px;
+    padding-top: 64px;
+}
+
+.hero .heading {
+    color: #171717;
+    font-family: var(--font_heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17;
+}
+
+.hero .descripsion {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 167%;
+}
+
+.hero .cta_gr {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.hero .cta_gr img {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+}
+
+.btnHero {
+    min-width: 180px;
+    line-height: 64px;
+    background: var(--primary_color);
+}
+
+.hero .watchVideo {
+    margin-left: 28px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero .watchVideo span {
+    color: #171000;
+    font-size: 1.8rem;
+    font-weight: 600px;
+    line-height: 1.67;
+    margin-left: 14px;
+}
+
+.hero .desc1 {
+    margin-top: 48px;
+}
+
+.hero .desc2 strong {
+    margin-right: 15px;
+    color: #171717;
+    font-family: var(--font_heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.23;
+}
+
+.hero .desc2 {
+    margin-top: 8px;
+}
+
+.hero .desc2 strong:nth-child(2) {
+    margin-left: 28px;
 }
